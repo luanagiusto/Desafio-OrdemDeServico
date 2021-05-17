@@ -1,0 +1,49 @@
+
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col-md-12">
+      <h1 class="text-center text-center">Status</h1>
+      </div>
+  </div>
+</div>
+
+
+<div class="container d-grid gap-2 d-md-flex justify-content-md-end">
+
+</div>
+
+<div class="container-fluid">
+<table class="table table-striped table-hover">
+  
+  <thead>
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col">Reclamante</th>
+      <th scope="col">Abertura</th>
+      <th scope="col">Defeito informado</th>
+      <th scope="col">Serviço Executado</th>
+      <th scope="col">Status</th>
+      <th scope="col">Ações</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ordensForm of listOrdens">
+      <th scope="row" >{{ordensForm.id}}</th>
+      <td>{{ordensForm.nome}}</td>
+      <td>{{ordensForm.dataopen | date:"dd/MM/yyyy"}}</td>
+      <td>{{ordensForm.defeitos}}</td>
+      <td>{{ordensForm.servicos}}</td>
+      <td><strong>{{ordensForm.status}}</strong></td>
+      <td>
+        <button type="button" class="btn btn-light" routerLink='/close-os'>Fechar Ordem de Serviço</button>
+        <button type="button" class="btn btn-light" routerLink='/registros'>Ver registros</button>
+      </td>
+
+      </tr>
+
+  </tbody>
+</table>
+</div>
+
+

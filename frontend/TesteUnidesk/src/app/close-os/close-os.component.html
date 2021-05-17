@@ -1,0 +1,125 @@
+<div class="container mb-5">
+  <h1 class="mt-5 mb-5 text-center"> Fechamento de Ordem de serviço</h1>
+  <form>
+
+
+    <div class="form-group">
+      <label for="nome">Reclamante:</label>
+      <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome"
+        [(ngModel)]='ordensForm.nome'>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label for="dataopen">Data de abertura:</label>
+          <input id="dataopen" name="dataopen" type="date" class="form-control" [(ngModel)]='ordensForm.dataopen'></div>
+
+        <div class="form-group col-md-6">
+          <label for="poste">Número do poste: </label>
+          <input type="text" class="form-control" id="poste" name="poste" placeholder="Informe o número do poste"
+             [(ngModel)]='ordensForm.poste'></div>
+
+        <div class="form-group col-md-10">
+           <label for="endereco">Endereço: </label>
+           <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite seu logradouro"
+             [(ngModel)]='ordensForm.endereco'></div>
+
+        <div class="form-group col-md-2">
+           <label for="numero">Número: </label>
+           <input type="text" class="form-control" id="numero" name="numero" placeholder="000 ou s/n"
+             [(ngModel)]='ordensForm.numero'></div>
+
+        <div class="form-group col-md-6">
+           <label for="bairro">Bairro: </label>
+           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite seu bairro"
+             [(ngModel)]='ordensForm.bairro'></div>
+
+        <div class="form-group col-md-4">
+           <label for="municipio">Município: </label>
+           <input type="text" class="form-control" id="municipio" name="municipio" placeholder="Cidade"
+             [(ngModel)]='ordensForm.cidade'></div>
+
+        <div class="form-group col-md-2">
+            <label for="estado">Estado: </label>
+            <select class="form-control" id="estado" name="estado" [(ngModel)]='ordensForm.estado'>
+              <option>Selecione...</option>
+              <option>AC</option>
+              <option>AL</option>
+              <option>AP</option>
+              <option>AM</option>
+              <option>BA</option>
+              <option>CE</option>
+              <option>DF</option>
+              <option>ES</option>
+              <option>GO</option>
+              <option>MG</option>
+              <option>MS</option>
+              <option>MT</option>
+              <option>PA</option>
+              <option>PB</option>
+              <option>PR</option>
+              <option>PE</option>
+              <option>PI</option>
+              <option>RJ</option>
+              <option>RN</option>
+              <option>RS</option>
+              <option>RO</option>
+              <option>RR</option>
+              <option>SC</option>
+              <option>SP</option>
+              <option>SE</option>
+              <option>TO</option>
+                </select></div>
+
+         <div class="form-group col-md-6">
+            <label for="defeitos">Defeitos: </label>
+            <select class="form-control" id="defeitos" name="defeitos"
+              [(ngModel)]="ordensForm.defeitos">
+              <option>Selecione...</option>
+              <option>Luz apagada durante a noite</option>
+              <option>Luz acesa durante o dia</option>
+              <option>Luz apaga e acende</option>
+              <option>Fio partido</option>
+                </select></div>
+
+          <div class="form-group col-md-6">
+            <label for="defeitos">Serviços: </label>
+              <select class="form-control" id="servicos" name="servicos"
+                [(ngModel)]="ordensForm.servicos"  >
+               <option>Substituição do reator</option>
+               <option>Substituição da lâmpada</option>
+               <option>Substituição do relê</option>
+               <option>Substituição do cabo ou fio</option>}
+               </select></div>
+
+           <div class="form-group col-md-6">
+               <label for="status">Status: </label>
+               <select class="form-control" id="status" name="status"
+                [(ngModel)]="ordensForm.status">
+                 <option>Selecione...</option>
+                 <option>Aberta</option>
+                 <option>Fechada</option>
+                 </select></div>
+
+            <div class="form-group col-md-6">
+               <label for="dataclose">Data de fechamento:</label>
+               <input id="dataclose" name="dataclose" type="date" class="form-control"
+                [(ngModel)]='ordensForm.dataclose'>
+                      </div>
+
+
+</div>
+</div>
+</div>
+  </form>
+
+<div>
+    <button type="submit" class="btn btn-outline-danger btn-lg" (click)="fecharOS()">Fechar</button>
+  </div>
+
+</div>
+
+

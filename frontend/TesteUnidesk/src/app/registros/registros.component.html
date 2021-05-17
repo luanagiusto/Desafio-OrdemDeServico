@@ -1,0 +1,37 @@
+
+
+
+
+
+
+<div class="container">
+
+<h1 class="mt-5 mb-5 text-center">Registros - Ordem de serviço</h1>
+
+
+<form>
+
+      <div class="card mb-4" *ngFor="let ordensForm of listOrdens">
+              <div class="card-header">
+                <h5 class="card-tile">{{ordensForm.id}}</h5>
+              </div>
+                <div class="card-body">
+                  <p class="card-text"><strong>Status: </strong>{{ordensForm.status}}</p>
+                  <p class="card-text"><strong>Nome do Reclamante: </strong>{{ordensForm.nome}}</p>
+                  <p class="card-text"><strong>Data de abertura: </strong>{{ordensForm.dataopen | date:"dd/MM/yyyy"}}</p>
+                  <p class="card-text"><strong>Número do poste: </strong>{{ordensForm.poste}}</p>
+                  <p class="card-text"><strong>Endereço: </strong>{{ordensForm.endereco}}, {{ordensForm.numero}}, {{ordensForm.bairro}}, {{ordensForm.cidade}}, {{ordensForm.estado}}</p>
+                  <p class="card-text"><strong>Defeitos informados: </strong>{{ordensForm.defeitos}}</p>
+                  <p class="card-text"><strong>Serviço executado: </strong>{{ordensForm.servicos}}</p>
+
+                  <p class="card-text"><strong>Data de fechamento: </strong>{{ordensForm.dataclose | date:"dd/MM/yyyy"}}</p>
+                </div>
+        </div>
+
+
+</form>
+
+</div>
+
+
+
